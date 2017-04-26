@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sarah's Challenge!!</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="container ">
+		<h1>Find the people!</h1>
+		<hr>
+		<div class="bg-info">
+			<div class="padding text-center">
+
+				There are 100 peoples' information hidden amongst these pages, can you find them all?<br>
+				You must choose a page to view, and how many people to return per page (up to 10). But beware, the road ahead is fraught with peril!<br> 
+				Some pages have no data, some pages have listings at certain numbers (for example 10 won't work but 4 will), and each number will provide different people<br> 
+				Can you find them all?<br>
+			</div>
+		</div>
+
+
+<!-- 		<form id="choosePageOption" class="topMargin">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="options1" value="specificOption">
+					View a specific page and number
+				</label>
+			</div>
+			<div class="radio">
+			  	<label>
+			    	<input type="radio" name="optionsRadios" id="options2" value="numbersOnAPage">
+			    	View all numbers available on a page, and how to get them
+			  	</label>
+			</div>
+			<div class="radio">
+			  	<label>
+			    	<input type="radio" name="optionsRadios" id="options4" value="all">
+			    	View all 100 people the easy way
+			  	</label>
+			</div>
+			<button type="submit" id="submitOptions" class="btn btn-primary">GO!</button>
+		</form> -->
+
+
+		<!-- form to get page how many to list numbers -->
+		
+		<form  class="form-inline topMargin" id="pageNumbers">
+		  	<div class="form-group">
+			    <label for="pageNum">Page Number</label>
+			    <input type="number" class="form-control" id="pageNum" required>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="perPage">Listings per page</label>
+			    <input type="number" class="form-control" id="perPage" placeholder="1-10">
+		  	</div>
+		  	<button type="submit" id="submitButton" class="btn btn-primary">View Results</button>
+		</form>
+	
+		
+		
+	</div>
+	<div class="container">
+		<br>
+		<div>
+			<div class="btn btn-warning btn-lg isHidden" id="searching">Searching for the answers!</div>
+			<!-- invalid entry warnings -->
+			<div class="btn btn-warning isHidden" id="invalidPageNumSize">Please choose a positive page number</div>
+			<div class="btn btn-warning isHidden" id="invalidNum">Please choose to display 1-10 entries per page</div>
+		</div>
+		<div>
+			<div class="btn btn-warning isHidden" id="invalidPageNumber">Nothing to show sadly, try a different page</div>
+			<div class="btn btn-warning isHidden" id="emptyString">This page might have secrets, try a different number per page</div>
+		</div>
+
+
+		<div class="col-sm-10 topMargin">
+			<table class="table table-striped isHidden" id="informationTable">
+			  <tr>
+			  	
+			  	<th>#</th>
+			  	<th>Name</th>
+			  	<th>Location</th>
+			  	<th>Page Number</th>
+			  	<th>Number Per Page</th>
+			  </tr>
+			</table>
+		</div>
+		
+
+	
+	<div>
+</body>
+</html>
